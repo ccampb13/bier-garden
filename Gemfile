@@ -3,7 +3,12 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 #ruby-gemset=zss
 
+gem 'activerecord', require: 'active_record'
 gem 'rake'
-gem 'rspec'
 gem 'sqlite3'
-gem 'activerecord'
+
+group :test do
+  gem 'database_cleaner'
+  gem 'rspec'
+  gem 'shoulda-matchers'
+end
