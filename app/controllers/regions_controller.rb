@@ -21,6 +21,17 @@ class RegionsController
     Router.navigate_regions_menu(self)
   end
 
+  def view(path_number)
+    region = regions[path_number - 1]
+    if region
+      puts "We're traveling to #{region.name} to try some of their local beers !"
+      beers_controller = BeersController.new(region)
+      beers_controller.list
+    else
+      puts "Sorry, region #{path_number} doesn't exist."
+    end
+  end
+
   private
 
   def regions

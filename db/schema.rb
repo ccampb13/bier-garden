@@ -13,6 +13,15 @@
 
 ActiveRecord::Schema.define(version: 2014080809121300) do
 
+  create_table "beers", force: true do |t|
+    t.string  "brewery"
+    t.string  "location"
+    t.string  "name"
+    t.string  "style"
+    t.text    "description"
+    t.integer "region_id"
+  end
+
   create_table "regions", force: true do |t|
     t.string "name"
   end

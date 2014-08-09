@@ -12,4 +12,16 @@ RSpec.describe "Adding Regions", :integration do
       expect(output).to include("Germany has been added to the list of regions")
     end
   end
+
+  context "invalid input" do
+    let(:long_string){"beer" * 20}
+    let!(:output){ run_bier_with_input("add", long_string)}
+
+    it "prints the error message for the type of invalid input" do
+      expect(output).to include("Name must be less than 30 characters")
+    end
+    it "shouldn't save the new record" do
+      expect(Region.count).to eql 0
+    end
+  end
 end
