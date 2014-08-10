@@ -17,8 +17,8 @@ class Router
     case command
     when "add"
       beers_controller.add
-    # when /\d+/
-    #   skills_controller.view(command.to_i)
+    when /\d+/
+      beers_controller.view(command.to_i)
     else
       puts "I don't know the '#{command}' command."
     end
