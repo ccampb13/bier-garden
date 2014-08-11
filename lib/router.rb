@@ -23,4 +23,16 @@ class Router
       puts "I don't know the '#{command}' command."
     end
   end
+
+  def self.navigate_styles_menu(styles_controller)
+    command = clean_gets
+    case command
+    when "add"
+      styles_controller.add
+    when /\d+/
+      styles_controller.view(command.to_i)
+    else
+      puts "I don't know the '#{command}' command."
+    end
+  end
 end

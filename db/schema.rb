@@ -16,12 +16,26 @@ ActiveRecord::Schema.define(version: 2014080809121300) do
   create_table "beers", force: true do |t|
     t.string  "brewery"
     t.string  "location"
-    t.string  "style"
     t.integer "region_id"
+    t.text    "description"
+  end
+
+  create_table "experiences", force: true do |t|
+    t.integer  "style_id"
+    t.boolean  "consumed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "regions", force: true do |t|
     t.string "name"
+  end
+
+  create_table "styles", force: true do |t|
+    t.string  "name"
+    t.string  "style"
+    t.string  "abv"
+    t.integer "beer_id"
   end
 
 end

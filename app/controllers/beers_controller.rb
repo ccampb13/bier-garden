@@ -1,4 +1,5 @@
 class BeersController
+
   def initialize(origin_region)
     @origin_region = origin_region
   end
@@ -36,8 +37,8 @@ class BeersController
       puts "#{beer.brewery}"
       puts "#{beer.location}"
       puts "#{beer.description}"
-      selection_controller = Controller.new(beer)
-      # beers_controller.list
+      styles_controller = StylesController.new(beer)
+      styles_controller.list
     else
       puts "Sorry, brewery #{path_number} doesn't exist."
     end
