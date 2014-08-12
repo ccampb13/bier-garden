@@ -37,5 +37,4 @@ ActiveRecord::Schema.define(version: 2014080809121300) do
     t.string  "abv"
     t.integer "beer_id"
   end
-
 end

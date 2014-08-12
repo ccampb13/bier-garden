@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative 'lib/environment'
-Environment.environment = ENV["DB"] || "development"
+Environment.environment = ENV["DB"] || "test"
 
 require_relative 'lib/router'
 

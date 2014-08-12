@@ -1,5 +1,6 @@
 class StylesController
 
+  require_relative  "../models/style.rb"
   def initialize(origin_beer)
     @origin_beer = origin_beer
   end
@@ -24,7 +25,9 @@ class StylesController
     puts "#{@origin_beer.brewery.upcase} BEERS AVAILABLE ON TAP"
     puts "=============="
     styles.each_with_index do |style, index|
-      puts "#{index + 1}. #{style.name} | #{style.style} | #{style.abv}% ABV"
+      output =  "#{index + 1}. #{style.name} | #{style.style} | #{style.abv}% ABV |"
+      output << " \u2713" if style.consumed? == 't'
+      puts output
     end
     Router.navigate_styles_menu(self)
   end
