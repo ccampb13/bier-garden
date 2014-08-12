@@ -6,8 +6,7 @@ This application guides the user through the beers of the world and allows them 
 ## Installation Instructions
 
   1. Clone this repository
-  2. ??
-  3. Profit
+  3. Begin keeping track of the beers you experience around the word.
 
 ## Usage
 
@@ -15,7 +14,7 @@ Run:
 
     ./bier
 
-Follow the on-screen prompts to select a beer from regions across the world.  Then, select a beer of your liking and mark it as experienced or not.
+Follow the on-screen prompts to select a beer from regions across the world. From here you can view or add breweries within the region. You can add beers to a brewery, and then select a beer and mark it as experienced or not.
 
 ## Technologies / Dependencies
 

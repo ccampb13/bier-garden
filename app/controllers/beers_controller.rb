@@ -33,9 +33,10 @@ class BeersController
     beer = beers[path_number - 1]
     if beer
       puts "We're traveling to #{beer.brewery} to try some of their beers on tap !"
+      puts "type 'add' to enter in a new beer for #{beer.brewery}"
       puts "==========="
-      puts "#{beer.brewery}"
-      puts "#{beer.location}"
+      puts "#{beer.brewery.upcase}"
+      puts "#{beer.location.upcase}"
       puts "#{beer.description}"
       styles_controller = StylesController.new(beer)
       styles_controller.list
@@ -50,9 +51,3 @@ class BeersController
     @beers ||= @origin_region.beers
   end
 end
-
-# t.string :brewery
-# t.string :location
-# t.string :name
-# t.string :style
-# t.text   :description

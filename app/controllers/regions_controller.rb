@@ -13,7 +13,7 @@ class RegionsController
 
   def list
     puts "=============="
-    puts "Regions"
+    puts "REGIONS"
     puts "=============="
     regions.each_with_index do |region, index|
       puts "#{index + 1}. #{region.name}"
@@ -25,6 +25,7 @@ class RegionsController
     region = regions[path_number - 1]
     if region
       puts "We're traveling to #{region.name} to try some of their local beers !"
+      puts "type 'add' to enter in a new brewery"
       beers_controller = BeersController.new(region)
       beers_controller.list
     else

@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative 'lib/environment'
-Environment.environment = ENV["DB"] || "test"
+Environment.environment = ENV["DB"] || "development"
 
 require_relative 'lib/router'
 
@@ -13,6 +13,7 @@ puts 'Welcome! Grab a seat and take a load off. Drink and be happy and we will d
 puts IO.readlines('beer.txt')
 
 puts 'Select the region you would like to explore and try their beer'
+puts "type 'add' to enter in a new region"
 
 regions_controller = RegionsController.new()
 regions_controller.list
