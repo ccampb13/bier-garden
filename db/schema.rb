@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2014080809121300) do
   create_table "beers", force: true do |t|
     t.string  "brewery"
     t.string  "location"
-    t.integer "region_id"
     t.text    "description"
+    t.integer "region_id"
   end
 
   create_table "experiences", force: true do |t|

@@ -11,6 +11,22 @@ class RegionsController
     end
   end
 
+  # def delete
+  #   puts "Which Region do you want to delete? (Enter #{Region.name})"
+  #   item = clean_gets
+  #   if item
+  #     puts "Are your SURE you wish to PERMANENTLY DELETE this region? (y/N)"
+  #     input = clean_gets.downcase
+  #     if input == 'y'
+  #       Region.destroy()
+  #       puts "Region has been deleted."
+  #     else
+  #       puts "Region has NOT been deleted."
+  #     end
+  #   end
+  # end
+
+
   def list
     puts "=============="
     puts "REGIONS"

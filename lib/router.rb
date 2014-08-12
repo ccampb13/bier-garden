@@ -5,6 +5,8 @@ class Router
     case command
     when "add"
       regions_controller.add
+    when "delete"
+      regions_controller.delete
     when /\d+/
       regions_controller.view(command.to_i)
     else
