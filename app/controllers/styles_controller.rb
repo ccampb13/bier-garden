@@ -20,13 +20,12 @@ class StylesController
   end
 
   def list
-    puts "=============="
-    puts "#{@origin_beer.brewery.upcase} BEERS AVAILABLE ON TAP"
-    puts "=============="
+    puts "============================================================="
+    puts "      #{@origin_beer.brewery.upcase} BEERS AVAILABLE ON TAP"
+    puts "============================================================="
     styles.each_with_index do |style, index|
-      output =  "#{index + 1}. #{style.name} | #{style.style} | #{style.abv}% ABV |"
-      output << " \u2713 " if style.experience == 't'
-      puts output
+      puts  "  #{index + 1}. #{style.name} | #{style.style} | #{style.abv}% ABV |"
+
     end
     Router.navigate_styles_menu(self)
   end
@@ -34,7 +33,7 @@ class StylesController
   def view(path_number)
     style = styles[path_number - 1]
     if style
-      puts "=============="
+      puts "============================================================="
       puts "#{@origin_beer.brewery}: #{style.name}"
       puts style.style
       ExperiencesController.new().record(style)

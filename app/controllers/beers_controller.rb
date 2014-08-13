@@ -20,9 +20,9 @@ class BeersController
   end
 
   def list
-    puts "=============="
-    puts "#{@origin_region.name.upcase} BREWERIES"
-    puts "=============="
+    puts "============================================================="
+    puts "         #{@origin_region.name.upcase} BREWERIES"
+    puts "============================================================="
     beers.each_with_index do |beer, index|
       puts "#{index + 1}. #{beer.brewery} | #{beer.location} | #{beer.description}"
     end
@@ -34,7 +34,7 @@ class BeersController
     if beer
       puts "We're traveling to #{beer.brewery} to try some of their beers on tap !"
       puts "type 'add' to enter in a new beer for #{beer.brewery}"
-      puts "==========="
+      puts "============================================================="
       puts "#{beer.brewery.upcase}"
       puts "#{beer.location.upcase}"
       puts "#{beer.description}"
